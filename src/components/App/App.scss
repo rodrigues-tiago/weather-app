@@ -1,0 +1,31 @@
+@import "neue";
+@import "vars";
+@import "reset";
+
+.App {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Neue Haas Grotesk ", sans-serif;
+  line-height: 1.2;
+}
+
+.dark {
+  background-color: $clr-primary;
+  color: $clr-secondary;
+
+  hr {
+    color: $clr-secondary;
+    background-color: $clr-secondary;
+  }
+  .theme-toggle-btn {
+    border: 1px solid $clr-secondary;
+  }
+}
+
+.light {
+  background-color: $clr-secondary;
+  color: $clr-primary;
+}
