@@ -5,18 +5,22 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  font-size: $fs-m;
+
+  @media only screen and (max-width: $breakpoint-desktop) {
+    font-size: $fs-m-mobile;
+  }
 }
 
 select {
   color: $clr-primary;
   background: $clr-secondary;
   font-family: inherit;
-  font-size: $fs-m;
 }
 
 .today-date {
   opacity: $txt-opacity;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 .options-container {
@@ -35,8 +39,8 @@ select {
 }
 
 .toggle-theme-btn {
-  width: 1em;
   aspect-ratio: 1;
+  padding: 0.5em;
   border: 1px solid $clr-primary;
   border-radius: 50%;
 

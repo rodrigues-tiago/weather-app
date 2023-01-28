@@ -49,7 +49,11 @@
 .stats-container {
   font-size: $fs-l-mobile;
 
-  @media only screen and (min-width: $breakpoint-tablet) {
+  @media only screen and ((min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop)) {
+    font-size: 40px;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
     font-size: $fs-l;
   }
 

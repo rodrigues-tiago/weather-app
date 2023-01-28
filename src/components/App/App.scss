@@ -2,8 +2,12 @@
 @import "../../scss/vars";
 @import "../../scss/reset";
 
+html {
+  height: -webkit-fill-available;
+}
+
 body {
-  min-height: 100vh;
+  min-height: -webkit-fill-available;
   font-family: "Neue Haas Grotesk ", sans-serif;
   line-height: 1.2;
   color: $clr-primary;
@@ -12,6 +16,7 @@ body {
 
 #root {
   height: 100vh;
+  height: 100dvh;
 }
 
 .App {
