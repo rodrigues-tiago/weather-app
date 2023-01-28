@@ -1,0 +1,20 @@
+:root {
+  --clr-primary: #232323;
+  --clr-secondary: #f7f7f7;
+}
+
+$clr-primary: var(--clr-primary);
+$clr-secondary: var(--clr-secondary);
+
+$fs-xl: 108px;
+$fs-xl-mobile: 96px;
+$fs-l: 36px;
+$fs-l-mobile: 32px;
+$fs-m: 18px;
+$fs-s: 16px;
+
+$txt-opacity: 0.4;
+
+$breakpoint-tablet: 576px;
+$breakpoint-desktop: 900px;
+$breakpoint-desktop-L: 1792px;

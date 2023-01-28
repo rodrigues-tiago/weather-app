@@ -1,0 +1,50 @@
+@import "../../../scss/vars";
+
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+select {
+  color: $clr-primary;
+  background: $clr-secondary;
+  font-family: inherit;
+  font-size: $fs-m;
+}
+
+.today-date {
+  opacity: $txt-opacity;
+  line-height: 1.8;
+}
+
+.options-container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.about-link {
+  opacity: $txt-opacity;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.toggle-theme-btn {
+  width: 1em;
+  aspect-ratio: 1;
+  border: 1px solid $clr-primary;
+  border-radius: 50%;
+
+  &:hover {
+    border-width: 2px;
+  }
+
+  &:active {
+    background-color: $clr-primary;
+  }
+}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useAPICaller = () => {
+const WeatherDataAPI = () => {
   const [weatherData, setWeatherData] = useState({});
   const [globalIdLocal, setGlobalIdLocal] = useState("1110600");
 
@@ -14,8 +14,9 @@ const useAPICaller = () => {
 
   return {
     weatherData,
+    globalIdLocal,
     setGlobalIdLocal,
   };
 };
 
-export default useAPICaller;
+export default WeatherDataAPI;

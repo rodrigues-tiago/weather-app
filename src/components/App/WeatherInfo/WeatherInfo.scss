@@ -1,0 +1,71 @@
+@import "../../../scss/vars";
+
+.weather-info {
+  & > * {
+    @media only screen and ((min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop)) {
+      width: 50%;
+    }
+
+    @media only screen and (max-width: $breakpoint-desktop) {
+      margin-bottom: 1.5rem;
+    }
+
+    @media only screen and (min-width: $breakpoint-desktop) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+  }
+}
+
+.degrees-container {
+  font-size: $fs-xl-mobile;
+  line-height: 1;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    font-size: 138px;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    width: 60%;
+    font-size: $fs-xl;
+  }
+}
+
+.degrees-arrow {
+  vertical-align: top;
+  font-size: 0.8em;
+}
+
+.degrees-unit {
+  font-size: 0.5em;
+}
+
+.stats-container {
+  font-size: $fs-l-mobile;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    font-size: $fs-l;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    font-size: $fs-l;
+  }
+}
+
+.stat {
+  label {
+    margin-right: 0.4em;
+    opacity: $txt-opacity;
+  }
+}

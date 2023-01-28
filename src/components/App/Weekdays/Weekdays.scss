@@ -1,0 +1,16 @@
+@import "../../../scss/vars";
+
+.weekdays {
+  display: flex;
+  gap: 0.5em;
+  font-size: $fs-s;
+  border-top: 1px solid $clr-primary;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    gap: 2em;
+  }
+
+  @media only screen and (max-width: $breakpoint-desktop) {
+    overflow-x: scroll;
+  }
+}
