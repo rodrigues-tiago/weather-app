@@ -18,13 +18,12 @@ function Header({ globalIdLocal, setGlobalIdLocal }) {
   useEffect(() => {
     setDistrictsOptions(
       distritsData?.data?.map((district) => {
+        if (district.globalIdLocal == globalIdLocal) {
+          selectElement.current.value = district.local;
+        }
         return <option value={district.local}>{district.local}</option>;
       })
     );
-
-    selectElement.current.value = distritsData?.data?.find(
-      (district) => district.globalIdLocal == globalIdLocal
-    ).local;
   }, [distritsData]);
 
   function selectLocation(e) {
