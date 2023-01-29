@@ -1,17 +1,11 @@
 @import "../../../scss/vars";
 
 .weather-info {
+  padding: 20px;
+
   & > * {
     @media only screen and ((min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop)) {
       width: 50%;
-    }
-
-    @media only screen and (max-width: $breakpoint-desktop) {
-      margin-bottom: 1.5rem;
-    }
-
-    @media only screen and (min-width: $breakpoint-desktop) {
-      margin-bottom: 0.5rem;
     }
   }
 
@@ -39,6 +33,7 @@
 
 .degrees-arrow {
   vertical-align: top;
+  font-family: serif;
   font-size: 0.8em;
 }
 

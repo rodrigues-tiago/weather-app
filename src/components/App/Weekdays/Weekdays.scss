@@ -4,7 +4,14 @@
   display: flex;
   gap: 0.5em;
   font-size: $fs-s;
-  border-top: 1px solid $clr-primary;
+
+  &:first-of-type {
+    margin-left: 20px;
+  }
+
+  &:last-of-type {
+    margin-right: 20px;
+  }
 
   @media only screen and (min-width: $breakpoint-tablet) {
     gap: 2em;

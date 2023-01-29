@@ -19,6 +19,7 @@ function App() {
       />
       <main className="main">
         <WeatherInfo weatherData={weatherData} selectedWeekday={selectedWeekday} />
+        <hr />
         <Weekdays weatherData={weatherData} setSelectedWeekday={setSelectedWeekday} />
       </main>
     </div>
