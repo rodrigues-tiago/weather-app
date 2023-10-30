@@ -1,10 +1,9 @@
-@import "../../../../scss/vars";
+@import '../../../../scss/vars';
 
 .weekday-card {
   min-width: max-content;
   padding: 1em;
   opacity: $txt-opacity;
-  font-size: $fs-m;
 
   @media only screen and (max-width: $breakpoint-desktop) {
     font-size: 20px;

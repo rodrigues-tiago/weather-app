@@ -1,74 +1,59 @@
-@import "../../../scss/vars";
+@import '../../../scss/vars';
 
-.weather-info {
-  padding: 20px;
-
-  & > * {
-    @media only screen and ((min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop)) {
-      width: 50%;
-    }
-  }
-
-  @media only screen and (min-width: $breakpoint-tablet) {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 20px;
-  }
-}
-
-.degrees-container {
-  font-size: $fs-xl-mobile;
-  line-height: 1;
+.stats-wrapper {
+  margin-bottom: 0.5em;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0;
 
   @media only screen and (max-width: $breakpoint-tablet) {
-    margin-bottom: 0.2em;
+    line-height: 1.2;
   }
 
   @media only screen and (min-width: $breakpoint-tablet) {
-    font-size: 138px;
-  }
-
-  @media only screen and (min-width: $breakpoint-desktop) {
-    width: 60%;
-    font-size: $fs-xl;
-  }
-}
-
-.degrees-arrow {
-  vertical-align: top;
-  font-family: serif;
-  font-size: 0.8em;
-}
-
-.degrees-unit {
-  font-size: 0.5em;
-}
-
-.stats-container {
-  font-size: $fs-l-mobile;
-
-  @media only screen and ((min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop)) {
-    font-size: 40px;
-  }
-
-  @media only screen and (min-width: $breakpoint-desktop) {
-    font-size: $fs-l;
-  }
-
-  @media only screen and (min-width: $breakpoint-desktop) {
-    width: 100%;
+    margin-bottom: 1.5em;
+    margin-left: 25%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 20px;
-    font-size: $fs-l;
+    gap: 15%;
+    font-size: 16px;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    margin-left: 53%;
   }
 }
 
 .stat {
   label {
-    margin-right: 0.4em;
-    opacity: $txt-opacity;
+    margin-right: 0.7em;
+    opacity: 0.6;
+  }
+}
+
+.degrees-wrapper {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    font-size: 17vw;
+
+    span {
+      display: block;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    display: flex;
+    gap: 0.7em;
+  }
+}
+
+.date {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    text-align: center;
+  }
+}
+
+.time {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    margin-left: 32%;
   }
 }

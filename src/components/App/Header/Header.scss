@@ -1,15 +1,10 @@
-@import "../../../scss/vars";
+@import '../../../scss/vars';
 
 .header {
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  font-size: $fs-m;
-
-  @media only screen and (max-width: $breakpoint-desktop) {
-    font-size: $fs-m-mobile;
-  }
 }
 
 select {

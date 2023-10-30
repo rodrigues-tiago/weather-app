@@ -1,6 +1,6 @@
-@import "../../scss/neue";
-@import "../../scss/vars";
-@import "../../scss/reset";
+@import '../../scss/neue';
+@import '../../scss/vars';
+@import '../../scss/reset';
 
 html {
   height: -webkit-fill-available;
@@ -8,15 +8,16 @@ html {
 
 body {
   min-height: -webkit-fill-available;
-  font-family: "Neue Haas Grotesk ", sans-serif;
-  line-height: 1.2;
+  font-family: 'Outfit', sans-serif;
+  line-height: 1;
   color: $clr-primary;
   background-color: $clr-secondary;
+  overflow-y: hidden;
 }
 
 #root {
-  height: 100vh;
   height: 100dvh;
+  height: 100vh;
 }
 
 .App {
@@ -26,9 +27,46 @@ body {
   justify-content: space-between;
 }
 
-hr {
-  margin-inline: 20px;
-  border: none;
-  height: 1px;
-  background: $clr-primary;
+header {
+  padding: 20px;
+  line-height: 0.8;
+}
+
+.title {
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    font-size: $fs-mobile;
+  }
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    font-size: $fs-tablet;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    font-size: $fs-desktop;
+  }
+}
+
+.weather-info-container {
+  padding: 20px;
+  padding-bottom: calc(18px + 40px);
+  font-size: $fs-desktop;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    font-size: $fs-mobile;
+  }
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    font-size: $fs-tablet;
+    line-height: 0.9;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    font-size: $fs-desktop;
+    line-height: 0.8;
+  }
 }
