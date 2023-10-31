@@ -1,5 +1,27 @@
 @import '../../../scss/vars';
 
+.weather-info-container {
+  padding: 20px;
+  padding-bottom: calc(18px + 40px);
+  font-size: $fs-desktop;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    font-size: $fs-mobile;
+  }
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    font-size: $fs-tablet;
+    line-height: 0.9;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    font-size: $fs-desktop;
+    line-height: 0.8;
+  }
+}
+
 .stats-wrapper {
   margin-bottom: 0.5em;
   font-size: 12px;

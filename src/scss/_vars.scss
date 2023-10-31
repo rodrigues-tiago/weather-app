@@ -1,10 +1,10 @@
 :root {
   --clr-primary: #fff;
-  --clr-secondary: #111;
+  --background-clr: #111;
 }
 
 $clr-primary: var(--clr-primary);
-$clr-secondary: var(--clr-secondary);
+$background-clr: var(--background-clr);
 
 $fs-desktop: 9vw;
 $fs-tablet: 11vw;

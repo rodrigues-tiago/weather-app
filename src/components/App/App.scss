@@ -11,8 +11,9 @@ body {
   font-family: 'Outfit', sans-serif;
   line-height: 1;
   color: $clr-primary;
-  background-color: $clr-secondary;
+  background-color: $background-clr;
   overflow-y: hidden;
+  user-select: none;
 }
 
 #root {
@@ -49,24 +50,8 @@ header {
   }
 }
 
-.weather-info-container {
-  padding: 20px;
-  padding-bottom: calc(18px + 40px);
-  font-size: $fs-desktop;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-
-  @media only screen and (max-width: $breakpoint-tablet) {
-    font-size: $fs-mobile;
-  }
-
-  @media only screen and (min-width: $breakpoint-tablet) {
-    font-size: $fs-tablet;
-    line-height: 0.9;
-  }
-
-  @media only screen and (min-width: $breakpoint-desktop) {
-    font-size: $fs-desktop;
-    line-height: 0.8;
-  }
+.react-p5 {
+  position: absolute;
+  // inset: 0;
+  z-index: 99;
 }

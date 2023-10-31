@@ -1,12 +1,11 @@
 import './App.scss'
-import Header from './Header/Header'
 import WeatherDataAPI from '../../services/WeatherDataAPI'
-import WeatherTypeAPI from '../../services/WeatherDataAPI'
-import DistritsAPI from '../../services/DistritsAPI'
 
+import RainSketch from './RainSketch/RainSketch'
+import Header from './Header/Header'
 import WeatherInfo from './WeatherInfo/WeatherInfo'
 import Options from './Options/Options'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function App() {
   const { weatherData, globalIdLocal, setGlobalIdLocal } = WeatherDataAPI()
@@ -14,9 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1 className="title">Weather App</h1>
-      </header>
+      <Header />
 
       <div className="weather-info-container">
         <WeatherInfo weatherData={weatherData} selectedWeekday={selectedWeekday} />
@@ -30,17 +27,11 @@ function App() {
           selectedWeekday={selectedWeekday}
           setSelectedWeekday={setSelectedWeekday}
         />
+
+        <p className="credits-text">Data by IPMA</p>
       </div>
 
-      {/* <Header
-        weatherData={weatherData}
-        globalIdLocal={globalIdLocal}
-        setGlobalIdLocal={setGlobalIdLocal}
-      /> */}
-      {/* <main className="main">
-         <WeatherInfo weatherData={weatherData} selectedWeekday={selectedWeekday} /> 
-         <Weekdays weatherData={weatherData} setSelectedWeekday={setSelectedWeekday} />
-        </main>*/}
+      {/* <RainSketch /> */}
     </div>
   )
 }

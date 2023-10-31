@@ -10,7 +10,6 @@ const WeatherDataAPI = () => {
     fetch(`${baseUrl}`)
       .then((response) => response.json())
       .then((weatherData) => setWeatherData(weatherData))
-    console.log(baseUrl)
   }, [baseUrl])
 
   return {
