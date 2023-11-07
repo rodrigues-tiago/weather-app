@@ -1,17 +1,20 @@
 @import '../../../scss/vars';
 
 .weather-info-container {
-  padding: 20px;
-  padding-bottom: calc(18px + 40px);
-  font-size: $fs-desktop;
+  padding: 15px;
+  padding-bottom: calc(15px + 38px);
   letter-spacing: -0.01em;
   text-transform: uppercase;
 
   @media only screen and (max-width: $breakpoint-tablet) {
     font-size: $fs-mobile;
+    text-align: center;
+    line-height: 0.85;
   }
 
   @media only screen and (min-width: $breakpoint-tablet) {
+    padding: 20px;
+    padding-bottom: calc(20px + 38px);
     font-size: $fs-tablet;
     line-height: 0.9;
   }
@@ -30,13 +33,13 @@
   letter-spacing: 0;
 
   @media only screen and (max-width: $breakpoint-tablet) {
-    line-height: 1.2;
+    display: flex;
+    justify-content: space-between;
   }
 
   @media only screen and (min-width: $breakpoint-tablet) {
     margin-bottom: 1.5em;
     margin-left: 25%;
-    display: flex;
     gap: 15%;
     font-size: 16px;
   }
@@ -54,24 +57,25 @@
 }
 
 .degrees-wrapper {
-  @media only screen and (max-width: $breakpoint-tablet) {
-    font-size: 17vw;
-
-    span {
-      display: block;
-    }
+  display: flex;
+  span {
+    display: block;
   }
 
+  @media only screen and (max-width: $breakpoint-tablet) {
+    justify-content: center;
+    text-align: center;
+    gap: 0.25em;
+  }
   @media only screen and (min-width: $breakpoint-tablet) {
-    display: flex;
     gap: 0.7em;
   }
 }
 
 .date {
-  @media only screen and (min-width: $breakpoint-tablet) {
-    text-align: center;
-  }
+  // @media only screen and (min-width: $breakpoint-tablet) {
+  text-align: center;
+  // }
 }
 
 .time {

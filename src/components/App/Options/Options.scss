@@ -3,12 +3,12 @@
 .bottom-container {
   position: absolute;
   bottom: 0;
-  transform: translateY(calc(100% - (1px + 0.75em + 1px + 0.25em + 1em + 0.25em + 1px + 0.7em)));
+  transform: translateY(calc(100% - (1px + 0.75em + 1px + 0.35em + 1em + 0.35em + 1px + 0.7em)));
   width: 100%;
   padding: 0.75em;
   padding-right: 3%;
   display: flex;
-  gap: 2em;
+  gap: 1.5em;
   font-size: 12px;
   line-height: 1;
   background-color: $background-clr;
@@ -17,30 +17,6 @@
 
   &:hover {
     transform: translateY(0%);
-  }
-
-  label {
-    display: inline-block;
-    padding-block: calc(0.25em + 1px);
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    @media only screen and (max-width: $breakpoint-desktop) {
-      padding-block: calc(0.25em);
-    }
-  }
-
-  button {
-    line-height: 1;
-    padding: 0.25em 0.75em;
-    border: 1px solid $clr-primary;
-    border-radius: 20px;
-  }
-
-  button:hover,
-  button.active {
-    background-color: $clr-primary;
-    color: $background-clr;
-    font-weight: 400;
   }
 
   @media only screen and (max-width: 450px) {
@@ -54,9 +30,40 @@
   }
 
   @media only screen and (min-width: $breakpoint-desktop) {
+    gap: 2em;
     select {
       display: none;
     }
+  }
+
+  label {
+    display: inline-block;
+    padding-block: calc(0.3em + 1px);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    @media only screen and (max-width: $breakpoint-desktop) {
+      padding-block: 0.3em;
+    }
+  }
+
+  button {
+    line-height: 1;
+    padding: 0.35em 0.7em;
+    border: 1px solid $clr-primary;
+    border-radius: 20px;
+  }
+
+  button:hover,
+  button.active {
+    background-color: $clr-primary;
+    color: $background-clr;
+    font-weight: 400;
+  }
+
+  select {
+    color: $clr-primary;
+    background: $background-clr;
+    font-family: inherit;
   }
 }
 

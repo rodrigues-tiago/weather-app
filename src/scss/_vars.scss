@@ -8,7 +8,7 @@ $background-clr: var(--background-clr);
 
 $fs-desktop: 9vw;
 $fs-tablet: 11vw;
-$fs-mobile: 9vw;
+$fs-mobile: 15vw;
 $fs-s: 16px;
 
 $txt-opacity: 0.4;
@@ -16,3 +16,17 @@ $txt-opacity: 0.4;
 $breakpoint-tablet: 576px;
 $breakpoint-desktop: 900px;
 $breakpoint-desktop-L: 1792px;
+
+@mixin round-button {
+  line-height: 1;
+  padding: 0.35em 0.7em;
+  border: 1px solid $clr-primary;
+  border-radius: 20px;
+
+  &:hover,
+  &.active {
+    background-color: $clr-primary;
+    color: $background-clr;
+    font-weight: 400;
+  }
+}

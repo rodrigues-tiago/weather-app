@@ -1,14 +1,50 @@
 @import '../../../scss/vars';
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  padding: 20px;
+  line-height: 0.85;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 15px;
+  }
 }
 
 .header-options {
   display: flex;
   gap: 3em;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    margin-top: 1em;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: $breakpoint-desktop) {
+    gap: 0;
+  }
+}
+
+.title {
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    font-size: $fs-mobile;
+    text-align: center;
+  }
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    font-size: $fs-tablet;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    font-size: $fs-desktop;
+  }
 }
 
 .input-color {
@@ -17,18 +53,15 @@ header {
   -webkit-appearance: none;
   background: none;
   border: 0;
-  cursor: pointer;
   padding: 0;
-  width: 2em;
   height: 1.5em;
-}
 
-.svg-container {
-  height: 1.25em;
-}
-
-.github-icon {
-  path {
-    fill: $clr-primary;
+  @media only screen and (max-width: $breakpoint-desktop) {
+    display: none;
   }
+}
+
+.github-btn {
+  font-size: 12px;
+  @include round-button;
 }
